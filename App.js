@@ -1,21 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import "react-native-gesture-handler";
+import { StyleSheet, Text, View } from "react-native";
+import { useFonts } from "expo-font";
+import { FONTS } from "./app/constants/fonts";
+import { NativeScreenContainer } from "react-native-screens";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
 
-export default function App() {
+import { OnBoarding } from "./app/screens";
+const Stack = createStackNavigator();
+
+const App = () => {
+  const [loaded] = useFonts(FONTS);
+
+  if (!loaded) return null;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="OnBoarding"
+          component={OnBoarding}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontFamily: "BlackBold",
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

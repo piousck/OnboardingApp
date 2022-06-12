@@ -1,0 +1,16 @@
+export const FONTS = {
+    Black: require("../assets/fonts/Montserrat-Black.ttf"),
+    BlackIT: require("../assets/fonts/Montserrat-BlackItalic.ttf"),
+    Bold: require("../assets/fonts//Montserrat-Bold.ttf"),
+    BoldIT: require("../assets/fonts/Montserrat-BoldItalic.ttf"),
+    ExtraBold: require("../assets/fonts/Montserrat-ExtraBold.ttf"),
+    ExtraBoldIT: require("../assets/fonts/Montserrat-ExtraBoldItalic.ttf"),
+    ExtraLight: require("../assets/fonts/Montserrat-ExtraLight.ttf"),
+    ExtraLightIT: require("../assets/fonts/Montserrat-ExtraLightItalic.ttf"),
+    Light: require("../assets/fonts/Montserrat-Light.ttf"),
+    LightIT: require("../assets/fonts/Montserrat-LightItalic.ttf"),
+    Medium: require("../assets/fonts/Montserrat-Medium.ttf"),
+    MediumIT: require("../assets/fonts/Montserrat-MediumItalic.ttf"),
+    Regular: require("../assets/fonts/Montserrat-Regular.ttf"),
+    SemiBold: require("../assets/fonts/Montserrat-SemiBold.ttf"),
+  };
